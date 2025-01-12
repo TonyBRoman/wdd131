@@ -1,11 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WDD 131</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Jorge Barron</title>
+    <meta name="description" content="Home page for the WDD 131 - Dynamic Web Fundamentls class, 
+    made it by Jorge Barron, with some information about me.">
+    <meta name="author" content="Jorge Barron">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
-    <body>
-        <h1>WDD 131 - Jorge</h1>
-    </body>
+<body>
+    <header>
+        <h1>WDD 131 - Dynamic Web Fundamentals - Jorge Barron</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/jorge-barron-roman/">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng&id=p7-p8#p7">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>    
+    <main>
+        <section class="card">
+            <div class="card-header">
+                <h2>About Me</h2>
+            </div>
+            <div class="about">
+                <p>
+                    My name is Jorge Barron, and I'm from Monterrey, Mexico. I'm currently studying Software Development 
+                    and Mechatronic Engineering. I'm married to my wife, Victoria, and we love listening to music and 
+                    playing with our two cats. I enjoy playing soccer, video games, watching movies, and spending time 
+                    with my family. I'm eager to improve my coding skills and create my own websites. I'm passionate about 
+                    technology and its potential to make a positive impact on society, from improving communication 
+                    to creating new opportunities.
+                </p>
+                <img src="images/id.JPG" alt="Tony Barron">
+            </div>
+            <h3>Monterry, Mexico</h3>
+            <hr>
+            <div class="country">
+                <img src="images/Flag_of_Mexico.jpg" alt="Flag of Mexico">
+            
+                <p>
+                    Monterrey, the capital of Nuevo León, is an industrial hub known for its stunning 
+                    mountainous landscapes and vibrant culture. Mexico, with over 126 million people, 
+                    offers a rich history, diverse geography, and delicious cuisine. Its economy is one 
+                    of the largest in Latin America, driven by industry and tourism. From bustling 
+                    Mexico City to ancient ruins, Mexico is full of charm and tradition.
+                </p>
+            </div>
+        </section>
+        <section class="card">
+            <div class="web-resources">
+                <h2>Web Dev Resources</h2>
+            </div>  
+            <ul>
+                <li><a href="https://dev.to/">Dev.to Community</a></li>
+                <li><a href="https://www.smashingmagazine.com/">Smashing Magazine</a></li>
+                <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+                <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
+                <li><a href="https://www.udemy.com/">Udemy</a></li>
+                <li><a href="https://placeholder.com/">Image Placeholder</a></li>
+            </ul>            
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy; <span id="currentYear"></span> 🤖 Jorge Antonio Barrón Román 🦾, Mexico
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
 </html>
