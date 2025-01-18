@@ -1,3 +1,14 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #346596;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --font-family: 'Roboto', sans-serif;
+    --transition-duration: 0.3s;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,14 +16,14 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-    background-color: #f4f4f4;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
     line-height: 1.6;
 }
 
 header {
-    background-color: #2c3e50;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 15px;
@@ -29,19 +40,25 @@ h2 {
 }
 
 nav {
-    display: none; 
+    display: none;
     position: absolute;
     width: auto;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
 }
 
 nav.active {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 10px;
     padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -54,25 +71,26 @@ nav ul li a {
     font-size: 1rem;
     display: block;
     padding: 10px;
-    text-align: right; 
-    transition: background-color 0.3s ease;
-    border-radius: 5px; 
+    text-align: right;
+    transition: background-color var(--transition-duration) ease;
+    border-radius: var(--border-radius);
 }
 
 nav ul li a:hover {
-    background-color: #346596; 
+    background-color: var(--secondary-color);
 }
 
 main {
     max-width: 95%;
     margin: 20px auto;
     text-align: center;
+    padding: 0px 50px 50px 50px;
 }
 
 section {
-    display: grid; 
-    grid-template-columns: 1fr; 
-    gap: 20px; 
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
 figure {
@@ -83,8 +101,8 @@ figure {
 figure img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }
 
 figcaption {
@@ -94,7 +112,7 @@ figcaption {
 }
 
 footer {
-    background-color: #2c3e50;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 15px 10px;
@@ -184,8 +202,7 @@ footer span {
     .menu-icon.active div:nth-child(3),
     .menu-icon.open div:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
-    }
-    
+    } 
 }
 
 
