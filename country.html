@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place</title>
+    <meta name="descrition" content="This is the assignament for week 3 ">
+    <meta name="author" content="Jorge Barron">
+    <link rel="stylesheet" href="styles/country.css">
+    <link rel="stylesheet" href="styles/country-large.css">
+    <script src="scripts/country.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>England</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/lion-large.webp" media="(min-width: 768px)">
+                <img src="images/lion-small.webp" alt="Lion in the Kingdom">
+            </picture>            
+        </section>
+        <section class="data">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Area:</strong> 130,279 km²</li>
+                <li><strong>Population:</strong> 57,106,398</li>
+                <li><strong>Capital:</strong> London</li>
+                <li><strong>Languages:</strong> English</li>
+                <li><strong>Currency:</strong> Pound Sterling (£)</li>
+                <li><strong>Time Zone:</strong> UTC+0</li>
+                <li><strong>Calling Code:</strong> +44</li>
+                <li><strong>Internet TLD:</strong> .uk</li>
+            </ul>
+        </section>
+        <section class="weather">
+            <h2>Weather</h2>
+            <div class="weather-icon">
+                <img src="images/weather.svg" alt="Weather Icon">
+            </div>
+            <ul>
+                <li><strong>Temperature:</strong> 10°C</li>
+                <li><strong>Conditions:</strong> Partly Cloudy</li>
+                <li><strong>Wind:</strong> 5 km/h</li>
+                <li><strong>Wind Chill:</strong> <span id="windChill">Calculating...</span></li>
+            </ul>
+            
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy; <span id="currentYear"></span> 🤖 Jorge Antonio Barrón Román 🦾, Mexico
+        </p>
+        <p id="lastModified"></p>
+    </footer> 
+</body>
+</html>

@@ -1,0 +1,81 @@
+@media screen and (min-width: 768px) {
+    /* Hero Section */
+    .hero img {
+        content: url("../images/lion-large.webp");
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .hero {
+        position: relative;
+        border-top: 1rem solid #FFFFFF;
+        border-bottom: .5rem solid #FFFFFF;
+    }
+
+    main {
+        position: relative;
+        font-size: 1.2rem;
+    }
+
+    /* Data y Weather */
+    .data, .weather {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.548);
+        color: black;
+        width: 250px;
+        padding: 3rem 1rem .5rem 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: left;
+    }
+
+    .data {
+        left: 2%;
+        top: 7%;
+        padding-right: 2rem;
+    }
+
+    .data h2 {
+        background-color: #C8102E;
+        color: white;
+        text-align: left;
+        padding: 1.2rem;
+        margin: -2rem 4rem 1rem -2.5rem;
+        border-radius: 8px;
+        font-size: 2rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .weather {
+        right: 1%;
+        top: 50%;
+    }
+
+    .weather h2 {
+        background-color: #C8102E;
+        color: white;
+        text-align: left;
+        padding: 1.2rem;
+        margin: -2rem 4rem 1rem -2.5rem;
+        border-radius: 8px;
+        font-size: 2rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .weather-icon {
+        display: block;
+        position: absolute;
+        top: 18.5%;
+        left: 150px;
+        transform: translateY(-50%);
+    }
+
+    .weather-icon img {
+        width: 55px;
+    }
+}
+
+
+
+

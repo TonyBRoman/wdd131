@@ -1,3 +1,4 @@
+// Menu icon
 const menuIcon = document.querySelector('.menu-icon');
 const navMenu = document.querySelector('nav');
 
@@ -6,6 +7,7 @@ menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('active'); 
 });
 
+// Get the date
 const yearSpan = document.getElementById("currentYear")
 if (yearSpan) {
     const currentYear = new Date().getFullYear();
