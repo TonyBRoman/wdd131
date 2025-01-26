@@ -1,10 +1,11 @@
 :root {
-    --primary-color: #C8102E;
+    --primary-color: #80001a;
     --background-color: #FFFFFF;
     --text-color: #333333;
     --font-family: 'Roboto', sans-serif;
 }
 
+ /* #9b001e or #80001a */
 body {
     font-family: var(--font-family);
     margin: 0;
@@ -90,6 +91,15 @@ footer span {
         display: block;
         margin: 1rem auto;
         text-align: center;
+    }
+    
+    .data::after {
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: #838080;
+        width: 100%;
+        margin-top: 1rem;
     }
 }
 

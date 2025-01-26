@@ -21,7 +21,7 @@
     /* Data y Weather */
     .data, .weather {
         position: absolute;
-        background-color: rgba(255, 255, 255, 0.548);
+        background-color: rgba(255, 255, 255, 0.623);
         color: black;
         width: 250px;
         padding: 3rem 1rem .5rem 2rem;
@@ -37,7 +37,7 @@
     }
 
     .data h2 {
-        background-color: #C8102E;
+        background-color: #80001a;
         color: white;
         text-align: left;
         padding: 1.2rem;
@@ -53,7 +53,7 @@
     }
 
     .weather h2 {
-        background-color: #C8102E;
+        background-color: #80001a;
         color: white;
         text-align: left;
         padding: 1.2rem;
