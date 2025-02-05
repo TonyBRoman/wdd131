@@ -87,11 +87,6 @@ main {
     padding: 0px 50px 50px 50px;
 }
 
-section {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
 
 figure {
     margin: 0;
@@ -223,7 +218,7 @@ footer span {
 
 .temple-card img {
     max-width: 100%;
-    min-height: 200px;
+    height: auto;
     border-radius: 5px;
     display: block;
     margin-top: 20px;
