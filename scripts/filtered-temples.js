@@ -21,7 +21,6 @@ if (lastModifiedParagraph) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    
     const temples = [
         {
             templeName: "Aba Nigeria",
@@ -118,29 +117,90 @@ document.addEventListener("DOMContentLoaded", function () {
             area: 33367,
             imageUrl: 
             "https://churchofjesuschristtemples.org/assets/img/temples/tijuana-mexico-temple/tijuana-mexico-temple-14590-main.jpg"
+          },
+          {
+            templeName: "Kirtland Ohio",
+            location: "Kirtland, Ohio, United States",
+            dedicated: "1836, March, 27",
+            area: 15000,
+            imageUrl:
+            "https://churchofjesuschristtemples.org/assets/img/temples/kirtland-temple/kirtland-temple-1275-main.jpg"
+          },
+          {
+            templeName: "Nauvoo Illinois",
+            location: "Nauvoo, Illinois, United States",
+            dedicated: "1846, May, 1",
+            area: 50000,
+            imageUrl:
+            "https://churchofjesuschristtemples.org/assets/img/temples/nauvoo-illinois-temple/nauvoo-illinois-temple-50576-main.jpg"
+          },
+          {
+            templeName: "Colonia Juarez Chihuahua Mexico",
+            location: "Chihuahua, Mexico",
+            dedicated: "1999, February, 25",
+            area: 6800,
+            imageUrl:
+            "https://churchofjesuschristtemples.org/assets/img/temples/colonia-juarez-chihuahua-mexico-temple/colonia-juarez-chihuahua-mexico-temple-1601-main.jpg"
           }
+
     ];
 
     const gridContainer = document.querySelector(".res-grid");
 
     if (!gridContainer) {
-        console.error("El contenedor '.res-grid' no fue encontrado en el HTML.");
+        console.error("The container '.res-grid' was not found in the HTML.");
         return;
     }
 
-    temples.forEach(temple => {
-        const card = document.createElement("div");
-        card.classList.add("temple-card");
+    function displayTemples(filteredTemples) { 
+        gridContainer.innerHTML = "";
+        filteredTemples.forEach(temple => {
+            const card = document.createElement("div");
+            card.classList.add("temple-card");
 
-        card.innerHTML = `
-        <h3>${temple.templeName}</h3>
-        <p><strong>Location:</strong> ${temple.location}</p>
-        <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-        <p><strong>Area:</strong> ${temple.area} sq. ft.</p>
-        <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" loading="lazy">
-        `;
+            card.innerHTML = `
+            <h3>${temple.templeName}</h3>
+            <p><strong>Location:</strong> ${temple.location}</p>
+            <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+            <p><strong>Area:</strong> ${temple.area} sq. ft.</p>
+            <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" loading="lazy">
+            `;
 
-        gridContainer.appendChild(card);
+            gridContainer.appendChild(card);
+        });
+    }
+
+    function filterTemples(category) {
+        let filteredTemples;
+
+        switch (category) {
+            case "Old":
+                filteredTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) < 1900);
+                break;
+            case "New": 
+                filteredTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) > 2000);
+                break;
+            case "Large":
+                filteredTemples = temples.filter(temple => temple.area > 90000);
+                break;
+            case "Small":
+                filteredTemples = temples.filter(temple => temple.area < 10000);
+                break;
+            case "Home":
+            default:
+                filteredTemples = temples;
+                break;
+        }
+        displayTemples(filteredTemples);
+    }
+
+    document.querySelectorAll("nav ul li a").forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); 
+            const category = this.textContent.trim(); 
+            filterTemples(category);
+        });
     });
-});
 
+    filterTemples("Home");
+});
