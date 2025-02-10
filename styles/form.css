@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #333;
     margin: 0;
     padding: 0;
@@ -42,7 +42,7 @@ label {
 
 legend { 
     font-size: 1.2rem;
-    padding-bottom: .5rem;
+    padding-bottom: 2.8rem;
 }
 
 input, select, textarea {
@@ -119,11 +119,11 @@ input[type="submit"]:hover {
     background-color: #094f91;
 }
 
-.thanks {
+.review {
     font-size: 1.5rem;
 }
 
-.thanks a{ 
+.review a{ 
     text-decoration: none;
     font-weight: bold;
     color: #094f91;

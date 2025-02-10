@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         productSelect.appendChild(option);
     });
 
-    if (window.location.pathname.includes("thanks.html")) {
+    if (window.location.pathname.includes("review.html")) {
         let count = parseInt(localStorage.getItem("reviewCount") || 0) + 1;
         localStorage.setItem("reviewCount", count);
         document.getElementById("review-counter").textContent = `Total Reviews Submitted: ${count}`;
