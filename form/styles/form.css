@@ -45,7 +45,6 @@ legend {
     padding-bottom: .5rem;
 }
 
-
 input, select, textarea {
     width: 100%;
     padding: 12px;
@@ -56,6 +55,9 @@ input, select, textarea {
     box-sizing: border-box;
 }
 
+input[type="radio"] {
+    transform: scale(2);
+}
 
 input[type="date"] {
     text-align: center;
@@ -115,6 +117,16 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #094f91;
+}
+
+.thanks {
+    font-size: 1.5rem;
+}
+
+.thanks a{ 
+    text-decoration: none;
+    font-weight: bold;
+    color: #094f91;
 }
 
 footer {
