@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="description" content="Product Review Form">
+    <meta name="author" content="Jorge Antonio Barron Roman">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="thanks.html" class="review-form">
+            <label for="product">Product Name</label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Choose a Product ...</option>
+            </select>
+
+            <legend>Overall Rating</legend>
+            <fieldset class="rating">
+                <span class="rating-item">
+                    <label>★</label>
+                    <input type="radio" name="rating" value="1" required>
+                </span>
+                <span class="rating-item">
+                    <label>★★</label>
+                    <input type="radio" name="rating" value="2">
+                </span>
+                <span class="rating-item">
+                    <label>★★★</label>
+                    <input type="radio" name="rating" value="3">
+                </span>
+                <span class="rating-item">
+                    <label>★★★★</label>
+                    <input type="radio" name="rating" value="4">
+                </span>
+                <span class="rating-item">
+                    <label>★★★★★</label>
+                    <input type="radio" name="rating" value="5">
+                </span>
+            </fieldset>
+
+
+            <label for="install-date">Date of Installation</label>
+            <input type="date" id="install-date" name="install-date" required>
+
+            <legend>Which features did you find useful in the product? <br><em>(Check all that apply)</em></legend>
+            <fieldset class="features">
+                <div class="feature-item">
+                    <input type="checkbox" id="durability" name="features" value="Durability">
+                    <label for="durability">Durability</label>
+                </div>
+            
+                <div class="feature-item">
+                    <input type="checkbox" id="ease-of-use" name="features" value="Ease of Use">
+                    <label for="ease-of-use">Ease of Use</label>
+                </div>
+            
+                <div class="feature-item">
+                    <input type="checkbox" id="performance" name="features" value="Performance">
+                    <label for="performance">Performance</label>
+                </div>
+            
+                <div class="feature-item">
+                    <input type="checkbox" id="design" name="features" value="Design">
+                    <label for="design">Design</label>
+                </div>
+            </fieldset>
+            
+            
+
+            <label for="review">Written Review <span class="optional">(Optional)</span></label>
+            <textarea id="review" name="review" rows="4"></textarea>
+
+            <label for="name">Your Name <span class="optional">(Optional)</span></label>
+            <input type="text" id="name" name="name">
+
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> 🤖 Jorge Antonio Barrón Román 🦾, Mexico</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
