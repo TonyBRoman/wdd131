@@ -1,0 +1,240 @@
+/* General Styles */
+:root {
+    --primary-color: #017cff;
+    --scondary-color:#FFC107;
+    --background-color: #FFFFFF;
+    --text-color: #333333;
+    --text-color2:white;
+    --font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+header {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-color);
+   
+}
+
+.logo {
+    padding-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 6rem;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: var(--scondary-color);
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Ajusta la altura */
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8; /* Hace la imagen un poco transparente */
+    margin-top: 1rem;
+}
+
+/* Título en la imagen */
+.hero-title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* Introduction */
+.introduction {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 15rem;
+    text-align: left;
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.intro-image {
+    flex: 1;
+    max-width: 600px;
+}
+
+.intro-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.intro-content {
+    flex: 2;
+    max-width: 600px;
+}
+
+.intro-content h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.intro-content .highlight {
+    color: var(--scondary-color); /* Highlighting part of the title */
+}
+
+.intro-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.intro-content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 18px;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background-color: #017cff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: var(--scondary-color);
+}
+
+/* Testimonials Section */
+.testimonials {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    color: #017cff;
+    margin-bottom: 20px;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial {
+    background: var(--background-color);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial p {
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial span {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+.how-it-works {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.how-it-works h2 {
+    margin: 5rem 0 5rem;
+    font-size: 2rem;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+    padding-bottom: 5rem ;
+}
+
+.step {
+    max-width: 250px;
+}
+
+.step img {
+    width: 30%;
+    border-radius: 10px;
+}
+
+.step h3 {
+    color: #017cff;
+    font-size: 1.5rem;
+}
+
+.step p {
+    color: #555;
+    font-size: 17px;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 2rem;
+    font-size: 20px;
+}
