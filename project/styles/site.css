@@ -303,16 +303,18 @@ footer {
     }
 
     .menu-toggle {
-        display: block;
+        display: flex;
         position: absolute;
-        right: 5px; 
-        top: 15px;
+        right: 15px; 
+        top: 20px;
         font-size: 3rem;
         background: none;
         border: none;
         color: var(--background-color);
         cursor: pointer;
         transition: transform 0.3s ease-in-out;
+        z-index: 1100;
+        padding: 0;
     }
 
     .menu-toggle.active {
