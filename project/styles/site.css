@@ -409,6 +409,14 @@ footer {
         font-size: 1.4rem;
     }
 
+    .break-line {
+        display: block;
+    }
+
+    .highlight {
+        white-space: nowrap;
+    }
+
     /* Testimonials */
     .testimonials-container {
         flex-direction: column;
