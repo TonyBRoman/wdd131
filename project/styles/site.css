@@ -469,6 +469,35 @@ footer {
         max-width: 90%;
     }
 
+    .course-details {
+        margin: 1rem;
+    }
+
+    .course-details h1 {
+        font-size: 2rem;
+    }
+
+    .course-details p {
+        font-size: 1rem;
+    }
+
+    .course-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .course-info .module {
+        min-width: 100%;
+    }
+
+    .cta-button {
+        font-size: 1.2rem;
+    }
+
+    .cta-button-back {
+        font-size: 1.2rem;
+    }
+
 }
 
 /* Courses file */
@@ -585,6 +614,109 @@ footer {
 .course .btn:hover {
     background-color: var(--scondary-color);
     color: var(--text-color);
+}
+
+/* Course Details Section */
+.course-details {
+    padding: 50px 50px;
+    max-width: 900px;
+    margin: 1rem auto;
+    background-color: var(--background-color);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.course-details h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.course-details p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.course-description {
+    margin-bottom: 30px;
+}
+
+.course-description h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.course-description p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.course-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.course-info .module {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.course-info .module h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.course-info .module p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: var(--scondary-color);
+}
+
+.cta-button-back {
+    display: inline-block;
+    background-color: var(--scondary-color);
+    color: var(--text-color);
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.cta-button-back:hover {
+    background-color: var(--primary-color);
 }
 
 
