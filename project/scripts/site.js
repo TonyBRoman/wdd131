@@ -1,39 +1,36 @@
-// Menu icon
 document.addEventListener("DOMContentLoaded", () => {
+    // Menu icon toggle
     const menuToggle = document.querySelector(".menu-toggle");
     const nav = document.querySelector("nav");
 
-    // Function to check if the screen width is in mobile view
     const isMobile = () => window.innerWidth <= 768;
 
-    // Toggle menu open/close when the button is clicked (only in mobile view)
-    menuToggle.addEventListener("click", () => {
-        if (isMobile()) {
-            nav.classList.toggle("active"); 
-            menuToggle.classList.toggle("active"); 
+    if (menuToggle && nav) {
+        menuToggle.addEventListener("click", () => {
+            if (isMobile()) {
+                const isActive = nav.classList.toggle("active");
+                menuToggle.classList.toggle("active");
+                menuToggle.innerHTML = isActive ? "&times;" : "&#9776;";
+                menuToggle.setAttribute("aria-expanded", isActive);
+            }
+        });
 
-            // Change the icon between ☰ (hamburger) and ✖ (close)
-            menuToggle.innerHTML = nav.classList.contains("active") ? "&times;" : "&#9776;";
-        }
-    });
+        window.addEventListener("resize", () => {
+            if (!isMobile()) {
+                nav.classList.remove("active");
+                menuToggle.classList.remove("active");
+                menuToggle.innerHTML = "&#9776;";
+                menuToggle.setAttribute("aria-expanded", "false");
+            }
+        });
+    }
 
-    // Automatically close menu when resizing to a larger screen
-    window.addEventListener("resize", () => {
-        if (!isMobile()) {
-            nav.classList.remove("active"); 
-            menuToggle.classList.remove("active"); 
-            menuToggle.innerHTML = "&#9776;"; 
-        }
-    });
-});
-
-// Courses Data 
-document.addEventListener("DOMContentLoaded", () => {
+    // Courses Data Handling
     const courses = [
         {
             level: 1,
             title: "Beginner",
-            summary: "This level introduces students to basic robotics concepts, simple programming (Scratch), and hands-on projects using everyday materials. The focus is on understanding what robots are, how they work, and writing basic programs.",
+            summary: "Basic robotics concepts, Scratch programming, and hands-on projects.",
             content: [
                 "✅ Introduction to Robotics – What robots are, history, and basic components.",
                 "✅ Programming Basics – Introduction to Scratch, using loops, and working with variables.",
@@ -43,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             level: 2,
             title: "Intermediate",
-            summary: "This level introduces electronics, Arduino, and text-based programming (Python). Students learn how circuits work, how to program Arduino boards, and how to write more complex programs.",
+            summary: "Electronics, Arduino programming, and Python coding.",
             content: [
                 "✅ Basic Electronics – Understanding circuits, LEDs, sensors, and actuators.",
                 "✅ Arduino Programming – Writing basic programs to control electronic components.",
@@ -54,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             level: 3,
             title: "Advanced",
-            summary: "This level focuses on advanced robotics, artificial intelligence, and complex integration projects. Students work on robotic motion, kinematics, and AI applications.",
+            summary: "Advanced robotics, AI, and complex projects.",
             content: [
                 "✅ Advanced Robotics – Understanding robot motion, kinematics, and real-world applications.",
                 "✅ AI and Automation – Exploring machine learning basics and automated systems.",
@@ -63,32 +60,30 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     ];
 
-    if (window.location.pathname.includes("course-detail.html")) {
+    if (document.getElementById("course-title")) {
         const urlParams = new URLSearchParams(window.location.search);
-        const level = urlParams.get('level'); 
-
-        const course = courses.find(course => course.level == level);
+        const level = urlParams.get("level");
+        const course = courses.find(c => c.level == level);
 
         if (course) {
-            
-            document.getElementById('course-title').textContent = course.title;
-            document.getElementById('course-objective').textContent = course.summary;
+            document.getElementById("course-title").textContent = course.title;
+            document.getElementById("course-objective").textContent = course.summary;
 
-            const courseModules = document.getElementById('course-modules');
+            const courseModules = document.getElementById("course-modules");
             courseModules.innerHTML = ""; 
 
             course.content.forEach(item => {
-                const listItem = document.createElement('p');
+                const listItem = document.createElement("p");
                 listItem.textContent = item;
                 courseModules.appendChild(listItem);
             });
         } else {
-        
-            document.getElementById('course-title').textContent = "Course not found";
-            document.getElementById('course-objective').textContent = "Sorry, the course you are looking for does not exist.";
+            document.getElementById("course-title").textContent = "Course not found";
+            document.getElementById("course-objective").textContent = "Sorry, the course you are looking for does not exist.";
         }
     }
 });
+
 
 
 
