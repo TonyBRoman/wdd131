@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <meta name="description" content="Form for user registration">
+    <meta name="author" content="Jorge Antonio Barron Roman">
+    <link rel="stylesheet" href="styles/site.css">
+    <link rel="stylesheet" href="styles/stie-mobile.css">
+    <script src="scripts/site.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.svg" alt="BotBuilders Academy Logo" width="100" height="100">
+            </a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="signup-form">
+            <h2>Sign Up for a Course</h2>
+            <p>Enroll in courses, get updates on events, and join our workshops, webinars, and camps!</p>
+            
+            <form action="thanks.html" method="get" class="form">
+                <!-- User Information -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="fname">Parent Full Name</label>
+                    <input type="text" id="fname" name="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="builders@example.com" required>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="000-000-0000" required>
+                </fieldset>
+        
+                <!-- Level of Interest -->
+                <fieldset>
+                    <legend>Level Interested</legend>
+                    <div id="level-container"></div>
+                </fieldset>
+        
+                <!-- Event Registration -->
+                <fieldset>
+                    <legend>Register for Events</legend>
+                    <label><input type="checkbox" name="events[]" value="robotics_workshop"> Robotics Workshop (March 15, 2025)</label>
+                    <label><input type="checkbox" name="events[]" value="ai_webinar"> AI in Robotics Webinar (April 10, 2025)</label>
+                    <label><input type="checkbox" name="events[]" value="summer_camp"> Summer Robotics Camp (June 20-25, 2025)</label>
+                </fieldset>
+        
+                <!-- Notifications -->
+                <fieldset>
+                    <legend>Stay Updated</legend>
+                    <label><input type="checkbox" name="notifications" value="yes"> Receive event notifications and updates</label>
+                </fieldset>
+        
+                <!-- Submit Button -->
+                <p class="continue">
+                    By clicking Continue, you consent to our Terms of Use and Privacy Policy, including consent to receive SMS from BotBuilders.
+                </p>
+                <button type="submit" class="button-form">Continue</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 BotBuilders Academy. All Rights Reserved.</p>
+    </footer>
+    
+</body>
+</html>

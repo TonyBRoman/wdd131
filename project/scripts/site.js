@@ -82,6 +82,41 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("course-objective").textContent = "Sorry, the course you are looking for does not exist.";
         }
     }
+
+    // Level interest radio buttons dynamically
+    const levels = [
+        { id: "begginer", label: "Level 1: Beginner"},
+        { id: "intermediate", label: "Level 2: Intermediate"},
+        { id: "advanced", label: "Level 3: Advanced"}
+
+    ];
+
+    const levelContainer = document.getElementById("level-container");
+    if (levelContainer) {
+        levels.forEach(level => {
+            const label = document.createElement("label");
+            const input = document.createElement("input");
+
+            input.type = "radio";
+            input.name = "level";
+            input.value = level.id;
+            input.required = true;
+
+            label.appendChild(input);
+            label.appendChild(document.createTextNode(` ${level.label}`));
+
+            levelContainer.appendChild(label);
+
+        });
+    }
+
+    // Review Counter using LocalStorage
+    if (window.location.pathname.includes("thanks.html")) {
+        let submitCount = parseInt(localStorage.getItem("submitCounter")) || 0; 
+        submitCount++; 
+        localStorage.setItem("submitCounter", submitCount); 
+    
+    }
 });
 
 

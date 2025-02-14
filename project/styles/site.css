@@ -585,3 +585,123 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Form */
+.signup-form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 25px;
+    background-color: #E3E9EF;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+.signup-form h2, 
+.signup-form p {
+    text-align: center;
+}
+
+.form fieldset { 
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+}
+
+.form legend { 
+    color: var(--primary-color);
+    font-family: var(--font-family);
+    padding: 0.5rem 1rem 0 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.form label {
+    font-family: var(--font-family2);
+    font-weight: bold;
+    display: block; 
+    margin-top: 6px;
+}
+
+.form fieldset label {
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+    font-weight: normal;
+}
+
+.form input, 
+.form select, 
+.form textarea { 
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0;
+    border: 1px solid #aaaaaa;
+    border-radius: 6px;
+    font-size: 1.3rem;
+    box-sizing: border-box;
+}
+
+
+.form input[type="radio"], 
+.form input[type="checkbox"] {
+    margin-right: 6px;
+    width: 16px;  
+    height: 16px;
+    vertical-align: middle;
+}
+
+.form input:required:invalid {
+    border-right: solid 8px red;
+}
+
+.form input:required:valid {
+    border-bottom: solid 8px green;
+}
+.continue { 
+    font-size: 12px;
+    text-align: center;
+}
+
+.button-form {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.button-form:hover {
+    background-color: var(--secondary-color);
+}
+
+.thanks { 
+    max-width: 700px;
+    margin: 5rem auto;
+    padding: 3.4rem;
+    background-color: #E3E9EF;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.thanks h1, 
+.thanks p {
+    margin-bottom: 5rem;
+}
+
+.thanks p { 
+    font-size: 1.1rem;
+}
