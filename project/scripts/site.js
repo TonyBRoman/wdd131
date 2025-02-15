@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Level interest radio buttons dynamically
     const levels = [
-        { id: "begginer", label: "Level 1: Beginner"},
+        { id: "beginner", label: "Level 1: Beginner"},
         { id: "intermediate", label: "Level 2: Intermediate"},
         { id: "advanced", label: "Level 3: Advanced"}
 
