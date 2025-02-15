@@ -154,9 +154,6 @@ nav ul li a:hover {
     color: var(--primary-color);
 }
 
-.intro-content .highlight {
-    color: var(--secondary-color);
-}
 
 .intro-content h3 {
     font-size: 1.5rem;
