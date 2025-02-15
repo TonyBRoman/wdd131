@@ -325,6 +325,10 @@ footer {
     font-weight: bold;
 }
 
+footer a { 
+    color: var(--text-color);
+}
+
 /* Courses file */
 /* Title Section Styles */
 .title {
