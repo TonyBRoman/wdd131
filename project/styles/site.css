@@ -178,11 +178,31 @@ nav ul li a:hover {
     border-radius: 8px;
     text-decoration: none;
     transition: background-color 0.3s ease-in-out;
+    margin-top: 30px;
+    text-align: center;
 }
 
 .cta-button:hover {
     background-color: var(--secondary-color);
 }
+
+.cta-button-back {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.cta-button-back:hover {
+    background-color: var(--primary-color);
+}
+
 
 /* Testimonials Section */
 .testimonials {
@@ -487,41 +507,6 @@ footer {
     font-size: 1rem;
     color: var(--text-color);
     margin-bottom: 10px;
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    padding: 12px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out;
-    margin-top: 30px;
-    text-align: center;
-}
-
-.cta-button:hover {
-    background-color: var(--secondary-color);
-}
-
-.cta-button-back {
-    display: inline-block;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    padding: 12px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out;
-    margin-top: 10px;
-}
-
-.cta-button-back:hover {
-    background-color: var(--primary-color);
 }
 
 /* Event file styles */
